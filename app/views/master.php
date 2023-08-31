@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ustora Demo</title>
+    <title><?php echo $data['title'] ?? 'Store Title'; ?></title>
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -35,19 +35,22 @@
         <?php require BASE.'/app/views/partials/header.php'; ?>
     </div> <!-- End header area -->
     
+    
     <div class="maincontent-area">
-        <?php load(); ?>
+        <?php load($data ?? []);?>
     </div> <!-- End main content area -->
     
+
     <div class="footer-top-area">
-        <?php require BASE.'/app/views/partials/footer.php'; ?>        
+        <?php require BASE.'/app/views/partials/footer.php'; ?>
     </div> <!-- End footer top area -->
     
-
     <div class="footer-bottom-area">
-        <?php require BASE.'/app/views/partials/bottom.php'; ?>        
+        <?php require BASE.'/app/views/partials/bottom.php'; ?>
     </div> <!-- End footer bottom area -->
    
+      <script src="app.js"></script>
+
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
     
@@ -66,6 +69,6 @@
     
     <!-- Slider -->
     <script type="text/javascript" src="assets/js/bxslider.min.js"></script>
-	<script type="text/javascript" src="assets/js/script.slider.js"></script>
+	  <script type="text/javascript" src="assets/js/script.slider.js"></script>
   </body>
 </html>

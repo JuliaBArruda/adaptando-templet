@@ -5,7 +5,17 @@ $inc = $_GET['inc'] ?? 'home';
 return match ($inc){
 
     'home' => function () {
-        var_dump('home');
+        create('products',[
+            'name' => 'Product1',
+            'price' => 345,
+            'img' => 'assets/img/product-1.png',
+            'description' => 'lorem ipsum'
+        ]);
+
+
+
+
+
     },
     'detail' => function () {
         var_dump('detail');
